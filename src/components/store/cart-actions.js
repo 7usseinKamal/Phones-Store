@@ -6,7 +6,7 @@ export const sendProducts = (phonesData) => {
   return async (dispatch) => {
     const sendCart = async () => {
       const response = await fetch(
-        "https://phones-store-3591e-default-rtdb.firebaseio.com/phones.json",
+        "https://phones-store-42f32-default-rtdb.firebaseio.com/phones.json",
         {
           method: "PUT",
           body: JSON.stringify(phonesData),
@@ -32,7 +32,7 @@ export const getData = () => {
     dispatch(uiActions.show({ value: true, title: "Loading" }));
     const getItems = async () => {
       const response = await fetch(
-        "https://phones-store-3591e-default-rtdb.firebaseio.com/phones.json"
+        "https://phones-store-42f32-default-rtdb.firebaseio.com/phones.json"
       );
 
       if (!response.ok) {
@@ -64,7 +64,7 @@ export const fetchData = (cart) => {
   return async (dispatch) => {
     const fetchCartData = async () => {
       const response = await fetch(
-        "https://phones-store-3591e-default-rtdb.firebaseio.com/phones.json",
+        "https://phones-store-42f32-default-rtdb.firebaseio.com/phones.json",
         {
           method: "PUT",
           body: JSON.stringify(cart),
@@ -89,7 +89,7 @@ export const sentData = (cartData) => {
   return async (dispatch) => {
     const sendCart = async () => {
       const response = await fetch(
-        "https://phones-store-3591e-default-rtdb.firebaseio.com/cart.json",
+        "https://phones-store-42f32-default-rtdb.firebaseio.com/cart.json",
         {
           method: "PUT",
           body: JSON.stringify(cartData),
@@ -114,7 +114,7 @@ export const replaceCart = () => {
   return async (dispatch) => {
     const getItems = async () => {
       const response = await fetch(
-        "https://phones-store-3591e-default-rtdb.firebaseio.com/cart.json"
+        "https://phones-store-42f32-default-rtdb.firebaseio.com/cart.json"
       );
 
       if (!response.ok) {
